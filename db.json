@@ -1,0 +1,15 @@
+{
+  "posts": [
+    {
+      "id": 2,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": 5,
+      "title": "Updated",
+      "author": "typicode"
+    }
+  ],
+  "comments": []
+}
