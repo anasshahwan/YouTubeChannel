@@ -20,10 +20,7 @@ export class AppComponent {
           Validators.pattern('[A-Za-z0-9._%-]+@[A-Za-z0-9._%-]+\\.[a-z]{2,3}'),
         ],
       ],
-      password: [
-        '',
-        [Validators.required, Validators.minLength(8), this.PasswordMustMatch],
-      ],
+      password: ['', [Validators.required, Validators.minLength(8)]],
       confirmPassword: ['', [Validators.required, Validators.minLength(8)]],
     },
     { validator: this.PasswordMustMatch('password', 'confirmPassword') }
@@ -45,6 +42,6 @@ export class AppComponent {
   }
   onSubmit() {
     console.log(this.signUpForm.value);
-    // this.signUpForm.reset();
+    this.signUpForm.reset();
   }
 }
