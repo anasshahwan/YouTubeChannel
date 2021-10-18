@@ -1,1 +1,40 @@
 <h1>Hello Pipes</h1>
+<p>Upper Case : {{ "anas" | uppercase }}</p>
+<p>Lower Case :{{ "anas" | lowercase }}</p>
+<p>Title Case : {{ "anas" | titlecase }}</p>
+<p>---------</p>
+<p>{{ 50 | currency }}</p>
+<p>{{ 50 | currency: "USD" }}</p>
+<p>{{ 50 | currency: "EUR" }}</p>
+<p>---------</p>
+<p>{{ 5.52 | number: "1.2-3" }}</p>
+<p>{{ 10.7 | number: "2.3-5" }}</p>
+<p>{{ 10.7 | number: "4.2-3" }}</p>
+<p>---------</p>
+
+<p>{{ "javascript" | slice: 4 }}</p>
+<p>{{ "javascript" | slice: 0:4 }}</p>
+<p>{{ [10, 2, 3, 4, 4, 5] | slice: 2:5 }}</p>
+
+<p>---------</p>
+
+<p>{{ 00.546 | percent }}</p>
+<p>{{ 00.54 | percent: "3.3-4" }}</p>
+// you can pass data like number pipe
+<p>---------</p>
+{{ myDate | date }}<br />
+{{ myDate | date: "short" }}<br />
+{{ myDate | date: "fullDate" }}<br />
+{{ myDate | date: "dd-MM-yyyy" }}<br />
+{{ myDate | date: "dd/MM/yyyy" }}<br />
+{{ myDate | date: "MM/dd/yy" }}<br />
+{{ myDate | date: "h:mm:ss" }}<br />
+
+<p>---------</p>
+
+{{ myDate | date: "fullDate" | uppercase }}<br />
+{{ myDate | date: "fullDate" | uppercase | slice: 0:6 }}<br />
+
+<p>---------</p>
+
+{{ "javascript" | capitalizeFirstLetter }}<br />
